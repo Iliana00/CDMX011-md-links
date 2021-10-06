@@ -21,5 +21,5 @@ En este proyecto se ha creado una herramienta de línea de comando (CLI) así co
 
 ## 2. Diagrama de flujo
 
-![Hola](img/ruta_mdlinks.jpg)
-
+![Diagrama de flujo](img/uno_diagram_mdlinks.jpg)
+![Diagrama de flujo](img/dos_diagram_mdlinks.jpg)
