@@ -6,7 +6,6 @@ const fs = require('fs');
 const path = require('path');
 
 const route = process.argv[2];
-
 //const route = __dirname;
 
 const directories  = fs.readdir(route, 'utf-8', (error, lista) =>{
@@ -40,22 +39,3 @@ const directories  = fs.readdir(route, 'utf-8', (error, lista) =>{
 
 
 
-
-/*
-Lee el path de los archivos
-const fs = require('fs');
-const path = require('path');
-
-//const route = process.argv[2];
-
-const directories  = fs.readdir('index.js', 'utf-8', (error, lista) =>{
-  if (error){
-  console.log('Hay un terrible error ', error);
-  } else {
-    lista.forEach(file => {
-      if (path.extname(file))
-        console.log(file);
-    })
-  }
-});
-*/
