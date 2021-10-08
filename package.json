@@ -1,4 +1,22 @@
 {
-  "name": "md-links",
-  "version": "0.1.0"
+  "name": "mdlinks",
+  "version": "1.0.0",
+  "description": "Esta es mi libreria",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iliana00/CDMX011-md-links.git"
+  },
+  "author": "Iliana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iliana00/CDMX011-md-links/issues"
+  },
+  "homepage": "https://github.com/Iliana00/CDMX011-md-links#readme"
 }
