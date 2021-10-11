@@ -4,4 +4,4 @@ const findFiles = require('./findfiles.js')
 const ruta = process.argv[2];
 
 let arrayFiles = findFiles.files(ruta)
-console.log(arrayFiles)
+//console.log(arrayFiles)
