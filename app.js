@@ -1,47 +1,7 @@
-
-
-
-module.exports = (dir, done) => {
-    const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
-    let results = [];
+const findFiles = require('./findfiles.js')
+const ruta = process.argv[2];
 
-    fs.readdir(dir, function(err, list) {
-        if (err) return done(err);
-
-        var pending = list.length;
-
-        if (!pending) return done(null, results);
-
-        list.forEach(function(file){
-            file = path.resolve(dir, file);
-
-            fs.stat(file, function(err, stat){
-                // If directory, execute a recursive call
-                if (stat && stat.isDirectory()) {
-                    // Add directory to array [comment if you need to remove the directories from the array]
-                    results.push(file);
-
-                    filewalker(file, function(err, res){
-                        results = results.concat(res);
-                        if (!--pending) done(null, results);
-                    });
-                } else {
-                    results.push(file);
-
-                    if (!--pending) done(null, results);
-                }
-            });
-        });
-    });
-};
-
-const route = process.argv[2];
-filewalker(route, function(err, data){
-    if(err){
-        throw err;
-    }
-    
-    // ["c://some-existent-path/file.txt","c:/some-existent-path/subfolder"]
-    console.log(data);
-  });
+let arrayFiles = findFiles.files(ruta)
+console.log(arrayFiles)
