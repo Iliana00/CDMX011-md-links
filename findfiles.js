@@ -22,45 +22,8 @@ function files(route) {
    }
    directories(pathRes);
   }
-  console.log(mdFiles)
+  //console.log(mdFiles)
   return mdFiles
 }
 
-
 exports.files = files;
-
-/*
-const fs = require('fs');
-const path = require('path');
-let mdFiles = []
-
-function files(route) {
-  const pathRes = path.resolve(route)
-
-  if (path.extname(pathRes) === '.md' || path.extname(pathRes).toLowerCase() == '.markdown') {
-    mdFiles.push(pathRes)
-  } else {
-    //const directories = (pathRes) => {
-      const lista = fs.readdirSync(pathRes)
-      lista.forEach(doc => {
-        if (path.extname(doc).length == 0) {
-          let smallRoute = path.join(pathRes, doc);
-          files(smallRoute);
-        } else {
-          let smallRoute = path.join(pathRes, doc);
-          if (path.extname(doc) == '.md' || path.extname(doc).toLowerCase() == '.markdown') {
-            mdFiles.push(smallRoute)
-          }
-        }
-      });
-      //return directories(pathRes)
-   //}
-  }
-  console.log(mdFiles)
-  return mdFiles
-  
-}
-
-exports.files = files;
-
-*/
