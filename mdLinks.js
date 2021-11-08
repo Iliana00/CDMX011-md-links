@@ -3,14 +3,14 @@ const path = require("path");
 const validation = require("./validateLinks.js");
 const findFiles = require("./findfiles.js");
 const links = require("./getLinks.js");
-const stat = require("./stats.js");
+const stat = require("./statistics.js");
 
  function mdLinks(ruta, options) {
 
   return new Promise((resolve, reject) => {
     let arrayFiles = findFiles.files(ruta);
     if(arrayFiles.length === 0){
-      reject('No hay archivos .md o .markdown')
+      reject('There are no links in this path')     
     } 
     let arrayLinks = links.getLinks(arrayFiles);
     if(arrayLinks.length === 0){

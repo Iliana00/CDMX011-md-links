@@ -8,13 +8,13 @@ const greet = chalk.white.bold("Welcome to MdLinks!");
 const inst = chalk.white.bold("The format required is:");
 const inst2 = chalk.white.bold("mdlink -v <path> OR mdlink -s <path> OR mdlink -v -s <path> ")
 const msgHelp = chalk.red.bold("Are you stuck? Use --help");
-const boxenOptions = {
+ const boxenOptions = {
  padding: 1,
  margin: 1,
  borderStyle: "round",
- borderColor: "yellow",
- backgroundColor: "#555555"
-};
+ borderColor: "magenta",
+ backgroundColor: "#FFC0CB"
+}; 
 const msgBox = boxen(greet, boxenOptions);
 
 
@@ -36,9 +36,10 @@ const statOpt = options.stats
 //Datos de inicio
 const ruta = process.argv[2];
 
-
-
-if(statOpt === true && validOpt === true){
+if (ruta == undefined){ 
+    console.log(chalk.red('There is no a valid path'))  
+  
+}else if(statOpt === true && validOpt === true){
   const optValidate = {
     validate: true,
     stats: true
