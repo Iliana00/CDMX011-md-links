@@ -4,10 +4,11 @@ function validateLinks(links) {
   return new Promise((resolve, reject) =>{
     const mapLink = links.map(objeto =>{
       return axios.get(objeto.href)
-      .then(function (response) {
+      .then((response) => {
         if (response.status >= 200 || response.status <= 300) {
           objeto.status = response.status;
           objeto.message = "OK";
+          //console.log(objeto)
           return objeto;
         }
       })
@@ -18,7 +19,7 @@ function validateLinks(links) {
           return objeto;    
         } else {
           objeto.status = 500;
-          objeto.message = "FAIL";
+          objeto.message = "FAIL";          
           return objeto
         }          
       });

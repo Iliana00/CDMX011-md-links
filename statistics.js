@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 function statistics(links) {
     return new Promise((resolve, reject) =>{
    const uniqueLinks = [];

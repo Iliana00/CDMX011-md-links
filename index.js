@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+/* eslint-disable no-undef */
+const fs = require("fs");
 const yargs = require("yargs");
 const chalk = require("chalk");
 const boxen = require("boxen");
@@ -6,7 +8,7 @@ const mdFunct = require("./mdLinks.js");
 
 const greet = chalk.white.bold("Welcome to MdLinks!");
 const inst = chalk.white.bold("The format required is:");
-const inst2 = chalk.white.bold("mdlink -v <path> OR mdlink -s <path> OR mdlink -v -s <path> ")
+const inst2 = chalk.white.bold("mdlink <path> -v OR mdlink <path> -s OR mdlink <path> -v -s")
 const msgHelp = chalk.red.bold("Are you stuck? Use --help");
  const boxenOptions = {
  padding: 1,
@@ -36,10 +38,9 @@ const statOpt = options.stats
 //Datos de inicio
 const ruta = process.argv[2];
 
-if (ruta == undefined){ 
-    console.log(chalk.red('There is no a valid path'))  
-  
-}else if(statOpt === true && validOpt === true){
+if (ruta==undefined || !fs.existsSync(ruta)){
+console.log(chalk.red.bold('                                        PLEASE PROVIDE A VALID PATH'))
+} else if(statOpt === true && validOpt === true){
   const optValidate = {
     validate: true,
     stats: true

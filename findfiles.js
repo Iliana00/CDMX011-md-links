@@ -1,12 +1,10 @@
+/* eslint-disable no-unused-vars */
 const fs = require('fs');
 const path = require('path');
 
 function files(route) {
   const pathRes = path.resolve(route)
   let mdFiles = []
-  /* if( path.extname(pathRes).length == 0){
-    return 'There is no a validate route'
-  } */
   if (path.extname(pathRes) === '.md' || path.extname(pathRes).toLowerCase() === '.markdown') {
     mdFiles.push(pathRes)
   } else  {

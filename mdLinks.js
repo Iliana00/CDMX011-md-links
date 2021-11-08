@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const fs = require("fs");
 const path = require("path");
 const validation = require("./validateLinks.js");
@@ -8,6 +9,7 @@ const stat = require("./statistics.js");
  function mdLinks(ruta, options) {
 
   return new Promise((resolve, reject) => {
+    
     let arrayFiles = findFiles.files(ruta);
     if(arrayFiles.length === 0){
       reject('There are no links in this path')     
