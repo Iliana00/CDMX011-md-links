@@ -18,7 +18,9 @@ En este proyecto se ha creado una herramienta de línea de comando (CLI) así co
 Las instrucciones para poder validar links que están dentro de archivos .md son las siguientes:
 
 mdlink ruta --validate ---> Para validar los links
+
 mdlink ruta --stats ---> Para obtener las estadísticas de los links totales y únicos
+
 mdlink ruta --validate --stats ---> Para obtener las estadísticas de los links totales,únicos y rotos
 
 ## 3. Diagrama de flujo
