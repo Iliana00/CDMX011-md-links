@@ -3,14 +3,9 @@
 ## Índice
 
 * [1. Objetivo del proyecto](#1-objetivo-del-proyecto)
-* [2. Diagrama de flujo](#2-diagrama-de-flujo)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Pistas, tips y lecturas complementarias](#7-pistas-tips-y-lecturas-complementarias)
-* [8. Checklist](#8-checklist)
-* [9. Achicando el problema](#9-achicando-el-problema)
+* [2. CLI](#2-cli)
+* [3. Diagrama de flujo](#3-diagrama-de-flujo)
+
 
 ***
 
@@ -18,7 +13,17 @@
 
 En este proyecto se ha creado una herramienta de línea de comando (CLI) así como una librería en JavaScript que se pretende lea y analice archivos en formato Markdown, para verificar los links que contengan y reportar algunas estadísticas.
 
+## 2. CLI
 
-## 2. Diagrama de flujo
+Las instrucciones para poder validar links que están dentro de archivos .md son las siguientes:
+
+mdlink ruta --validate ---> Para validar los links
+mdlink ruta --stats ---> Para obtener las estadísticas de los links totales y únicos
+mdlink ruta --validate --stats ---> Para obtener las estadísticas de los links totales,únicos y rotos
+
+## 3. Diagrama de flujo
 
 ![Diagrama de flujo](img/diagrama_md.png)
+
+
+
